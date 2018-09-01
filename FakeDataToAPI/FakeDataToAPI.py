@@ -1,5 +1,7 @@
 
-from faker import Faker
+from faker import Faker # https://faker.readthedocs.io/en/master/index.html
+
+
 from datetime import timedelta
 import time
 import requests
