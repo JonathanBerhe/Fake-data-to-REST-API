@@ -95,14 +95,14 @@ def print_result(confirm=list()):
 
 def input_parameters():
     try:
-        # Step 1. number of pv 
+        # Step 1. number of maschines 
         maschine_to_insert = int(input("Inserire il numero delle maschine-fake da inviare al db: "))
         if(maschine_to_insert < 500):
             print(f"Verranno generati ed inseriti {maschine_to_insert} finti maschine. \n")
         else:
             maschine_to_insert = input("Inserire correttamente il numero(<500) delle maschine: \n")
     
-        # Step 2. number of patches
+        # Step 2. number of packages
         package_to_insert = int(input("Inserire il numero dei package-fake da inviare al db: "))
         if(package_to_insert < 500):
             print(f"Verranno generati ed inseriti {package_to_insert} finti package. \n")
