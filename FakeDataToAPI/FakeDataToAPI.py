@@ -25,7 +25,7 @@ def create_maschine_fake_data(MAX_NUMBER_FAKE_INFO):
 
     for _ in range(MAX_NUMBER_FAKE_INFO):
         json_data = {
-        'codPv': 'MASCHINE00' + str(faker.random_int(min=0, max=9) + faker.random_int(min=0, max=9) + faker.random_int(min=0, max=9)),
+        'maschine': 'MASCHINE00' + str(faker.random_int(min=0, max=9) + faker.random_int(min=0, max=9) + faker.random_int(min=0, max=9)),
         'address': str(faker.street_address()),
         'city': faker.city(),
         'software': 'genericOS',
@@ -67,11 +67,11 @@ def send_fake_data(maschine_data, package_data):
 
     result = [{
         'code': maschine_result,
-        'name': 'PV DATA'
+        'name': 'MASCHINE DATA'
         },
         {
         'code': package_result,
-        'name': 'PATCH DATA'
+        'name': 'PACKAGE DATA'
         }]
 
     return result
@@ -79,7 +79,7 @@ def send_fake_data(maschine_data, package_data):
 
 def print_time(start):
     end = time.monotonic()
-    print("Duration query: {}".format(timedelta(seconds=end - start)))
+    print(f"Duration query: {timedelta(seconds=end - start)}")
     return
 
 
